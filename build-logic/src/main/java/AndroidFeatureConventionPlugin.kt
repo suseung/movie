@@ -14,7 +14,11 @@ internal class AndroidFeatureConventionPlugin : Plugin<Project> {
             }
 
             dependencies {
+                implementation(project(":core:resources"))
+                implementation(project(":core:designsystem"))
+                implementation(project(":core:base"))
                 implementation(project(":domain"))
+                implementation(project(":presentation:common"))
 
                 implementation(libs.androidx.core.ktx)
                 implementation(libs.androidx.appcompat)
