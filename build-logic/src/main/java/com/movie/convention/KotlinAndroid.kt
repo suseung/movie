@@ -31,6 +31,9 @@ internal fun Project.configureKotlin() {
     tasks.withType<KotlinCompile>().configureEach {
         kotlinOptions {
             jvmTarget = MovieConfig.javaCompileTarget.toString()
+            freeCompilerArgs = freeCompilerArgs + listOf(
+                "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+            )
         }
     }
 }

@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.movie.android.hilt)
 }
 
-
 android {
-    namespace = "com.movie.home"
+    namespace = "com.movie.bookmark"
 }

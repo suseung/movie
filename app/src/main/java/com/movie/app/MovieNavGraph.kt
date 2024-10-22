@@ -6,7 +6,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -14,6 +13,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.movie.app.Destination.BOOKMARK
 import com.movie.app.Destination.HOME
+import com.movie.home.HomeScreen
 
 object Destination {
     const val HOME = "home"
@@ -31,7 +31,9 @@ fun MovieNavGraph(
         navController = navController,
         startDestination = startDestination
     ) {
-        composable(HOME) {}
+        composable(HOME) {
+            HomeScreen()
+        }
         composable(BOOKMARK) {}
     }
 }
