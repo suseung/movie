@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     alias(libs.plugins.movie.android.library)
     alias(libs.plugins.movie.android.hilt)
@@ -6,6 +8,15 @@ plugins {
 
 android {
     namespace = "com.movie.data"
+
+    defaultConfig.apply {
+        val apiKey = gradleLocalProperties(projectRootDir = rootDir, providers = providers).getProperty("api.key")
+        buildConfigField("String", "apiKey", apiKey)
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
 }
 
 dependencies {
@@ -19,4 +30,5 @@ dependencies {
     implementation(libs.bundles.okhttp3)
 
     implementation(libs.androidx.datastore)
+    implementation(libs.chucker)
 }

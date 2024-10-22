@@ -27,6 +27,7 @@ kotlinxCoroutines = "1.7.3"
 kotlinSerializationJson = "1.6.2"
 kotlinSerialization = "1.9.10"
 androidxLifecycle = "2.6.2"
+chucker = "3.5.2"
 
 
 [libraries]
@@ -66,6 +67,7 @@ okhttp-url-connection = { group = "com.squareup.okhttp3", name = "okhttp-urlconn
 okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3" }
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
 androidx-viewModel-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidxLifecycle" }
+chucker = { group = "com.github.chuckerteam.chucker", name = "library", version.ref = "chucker" }
 
 
 [bundles]
