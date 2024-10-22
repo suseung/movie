@@ -1,10 +1,5 @@
 import com.android.build.api.dsl.ApplicationExtension
 import com.movie.convention.MovieConfig
-import com.movie.convention.MovieConfig.applicationId
-import com.movie.convention.MovieConfig.minSdk
-import com.movie.convention.MovieConfig.targetSdk
-import com.movie.convention.MovieConfig.versionCode
-import com.movie.convention.MovieConfig.versionName
 import com.movie.convention.configureAndroidCompose
 import com.movie.convention.configureKotlinAndroid
 import com.movie.convention.implementation
@@ -57,12 +52,12 @@ internal class AndroidApplicationConventionPlugin : Plugin<Project> {
             }
 
             dependencies {
-                implementation(project(":data"))
-                implementation(project(":domain"))
+                implementation(project(":core:data"))
+                implementation(project(":core:domain"))
                 implementation(project(":core:designsystem"))
-                implementation(project(":core:resources"))
-                implementation(project(":core:base"))
+                implementation(project(":core:ui"))
                 implementation(project(":presentation:common"))
+                implementation(project(":presentation:bookmark"))
                 implementation(project(":presentation:home"))
             }
         }
